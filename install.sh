@@ -29,9 +29,8 @@ case "$action" in
             exit 1
         fi
         install -D -m 0755 "$BIN" "$BIN_DIR/$PROGRAM"
-        ln -sfn "$PROGRAM" "$BIN_DIR/gnuchan-sound-record"
         install -D -m 0644 "$ROOT/gnuchansoundrecord.desktop" "$APP_DIR/gnuchansoundrecord.desktop"
-        echo "Installed $PROGRAM and $BIN_DIR/gnuchan-sound-record"
+        echo "Installed $PROGRAM to $BIN_DIR/$PROGRAM"
         ;;
     uninstall)
         if [ -z "$DESTDIR" ] && [ "$(id -u)" -ne 0 ]; then
@@ -40,7 +39,7 @@ case "$action" in
         fi
         rm -f "$BIN_DIR/$PROGRAM" "$BIN_DIR/gnuchan-sound-record" \
             "$APP_DIR/gnuchansoundrecord.desktop"
-        echo "Removed $PROGRAM, gnuchan-sound-record, and its desktop entry"
+        echo "Removed $PROGRAM and its desktop entry"
         ;;
     *)
         echo "Usage: $0 [build|run|check|install|uninstall]" >&2

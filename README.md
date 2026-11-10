@@ -78,10 +78,9 @@ installing to the system. The noninteractive installer is
 `sudo ./install.sh install`; it installs the executable and desktop entry.
 For package staging, set `DESTDIR` (no root needed), e.g.
 `DESTDIR=debian/tmp PREFIX=/usr ./install.sh install`. The executable is
-available as both `/usr/local/bin/GnuChanSoundRecord` and
-`/usr/local/bin/gnuchan-sound-record`. Override `PREFIX` and/or `DESTDIR` for
-packaging. Use `sudo ./install.sh uninstall` (or `sudo make uninstall`) to
-remove both command names and the desktop entry.
+available as `/usr/local/bin/GnuChanSoundRecord`. Override `PREFIX` and/or
+`DESTDIR` for packaging. Use `sudo ./install.sh uninstall` (or
+`sudo make uninstall`) to remove the command and desktop entry.
 
 ## Capture and quality details
 
