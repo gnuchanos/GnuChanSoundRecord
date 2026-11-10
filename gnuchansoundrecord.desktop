@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=GnuChan Sound Record
+Comment=Record, play, and organize microphone recordings
+Exec=GnuChanSoundRecord
+Icon=audio-input-microphone
+Terminal=false
+Categories=AudioVideo;Audio;Recorder;
+Keywords=record;microphone;audio;voice;
